@@ -176,7 +176,7 @@
      padding:10px 0px 2px 0px;
 }
  .logo {
-   position: relative;
+   position: absolute;
      height:130px;
      width: auto;
      top: 0px;
@@ -195,20 +195,10 @@
      font-weight:600;
      font-size: 20px;
      color: #0f5715;
-     background-color: #0f5715;
-     color: white;
+     color: #000;
 }
 /********** Logo And Menu CSS Ends **********/
  /********** Slider and Notification CSS Starts **********/  
-.centered-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(52, 90, 52); /* Adjust text color for visibility */
-  font-size: 8rem; /* Adjust font size as needed */
-  text-shadow: 20rem;
-}
  .banner {
      width:100%;
      border-top:1px solid #cccfff;
@@ -241,6 +231,7 @@
  .about-img img {
      width:100%;
      padding:0px 25px 0px 0px;
+	 border: 1px solid #787eff;
 }
  .about-detail h6 {
      font-size:16px;
@@ -259,6 +250,11 @@
      line-height: 25px;
      color: #1e1e1e;
 }
+	      .about-detail p span {
+		      font-size: 3rem;
+		      color: blue;
+		      font-family: georgia;
+	      }
  .about-box {
      width:94%;
      float: left;
@@ -925,8 +921,9 @@ p .quick-link ul {
         <div class="about-detail">
            <h6>About us</h6>
            <h1>Hi, Welcome To <span>Nyabuhikye Secondary School</span></h1>
-           <p>.</p>
-           <p>.</p>
+           <p><span>Vision</span> A model school for morals, and academic excellence.</p>
+           <p><span>Mission</span> To provide quality education for self reliance and displined citizens.</p>
+		<p><span>Motto</span>Displine + Hardwork = Success</p>
            <div class="width-30">
               <div class="about-box">
                  <img src="images/award-1.png">
