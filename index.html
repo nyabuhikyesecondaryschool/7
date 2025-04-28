@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Website Site</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" ref="css/style.css">
+        <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <!-- 
+  - custom css link
+-->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- 
+  - google font link
+-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- 
+  - preload images
+-->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+  <link
+    rel="preload"
+    as="image"
+    href="./assets/images/hero-abs-1.png"
+    media="min-width(768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-abs-2.png"
+      media="min-width(768px)"
+    />
       <style>
         /********** Common CSS Starts **********/  
         html, body {
@@ -138,7 +176,7 @@
      padding:10px 0px 2px 0px;
 }
  .logo {
-   position: absolute;
+   position: relative;
      height:130px;
      width: auto;
      top: 0px;
@@ -157,10 +195,20 @@
      font-weight:600;
      font-size: 20px;
      color: #0f5715;
-     color: #000;
+     background-color: #0f5715;
+     color: white;
 }
 /********** Logo And Menu CSS Ends **********/
  /********** Slider and Notification CSS Starts **********/  
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(52, 90, 52); /* Adjust text color for visibility */
+  font-size: 8rem; /* Adjust font size as needed */
+  text-shadow: 20rem;
+}
  .banner {
      width:100%;
      border-top:1px solid #cccfff;
@@ -193,10 +241,9 @@
  .about-img img {
      width:100%;
      padding:0px 25px 0px 0px;
-	 border: 1px solid #787eff;
 }
  .about-detail h6 {
-     font-size:18px;
+     font-size:16px;
      color: #787eff;
 }
  .about-detail h1 {
@@ -208,17 +255,10 @@
      color: #787eff;
 }
  .about-detail p {
-     font-size: 2rem;
-     line-height: 2rem;
+     font-size: 14px;
+     line-height: 25px;
      color: #1e1e1e;
-	 margin-bottom: 2rem;
 }
-	      .about-detail p span {
-		      font-size: 4rem;
-		      color: blue;
-		      font-family: georgia;
-		      line-height:2rem
-	      }
  .about-box {
      width:94%;
      float: left;
@@ -482,7 +522,6 @@
 }
 /********** Placement Company CSS Ends **********/
  /********** Testimonial CSS Starts **********/  
-
  .tetimonial {
      width: 340px;
      background: white;
@@ -866,6 +905,7 @@ p .quick-link ul {
 <!---------- Slider and Notification HTML Starts --------->
 <div class="width-100">
   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3BC14mfRUDeaY3xgwE9tftj3WZnx1IBnT6ffe1rHGR6oru7sUbe8aZ4qiq8CW5gzbawvpdxPfMYrbRvvU0a0zQDmg06amSl0sykaoz-fi5c9r5H9TUPyxufRBycshXE3YBeRZKj8R_6cjwd3ksVwfQMtgS6htonLjHJkV-ZdoZ7NrsfCUzKpC7vRZw-M/w945-h600-p-k-no-nu/IMG-20250126-WA0017.jpg" class="banner" alt="Background-Photo">
+  <div class="centered-text">NYABUHIKYE SECONDARY SCHOOL</div>
  </div>
   <div class="notification">
      <div class="container">
@@ -885,9 +925,8 @@ p .quick-link ul {
         <div class="about-detail">
            <h6>About us</h6>
            <h1>Hi, Welcome To <span>Nyabuhikye Secondary School</span></h1>
-           <p><span>Vision:</span> A model school for morals, and academic excellence.</p>
-           <p><span>Mission:</span> To provide quality education for self reliance and displined citizens.</p>
-		<p><span>Motto:</span>Displine + Hardwork = Success</p>
+           <p>.</p>
+           <p>.</p>
            <div class="width-30">
               <div class="about-box">
                  <img src="images/award-1.png">
@@ -1217,7 +1256,55 @@ p .quick-link ul {
 </div>
 <!---------- Testimonial HTML Ends --------->
 
+<section
+          class="section newsletter"
+          id="admission"
+          aria-label="newsletter"
+          style="background-image: url('./assets/images/newsletter-bg.jpg')"
+        >
+          <div class="container">
+            <p class="section-subtitle">
+           
+            </p>
 
+            <h2 class="h2 section-title">
+              We will contact you via your mobile number with more details
+            </h2>
+
+            <form
+              action="https://formspree.io/f/xjvqrygn"
+              method="POST"
+              class="newsletter-form"
+            >
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  name="phone_number"
+                  aria-label="tel"
+                  placeholder="Enter your mobile number"
+                  required
+                  class="email-field"
+                />
+
+                <ion-icon
+                  name="mail-open-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <span class="span">Contact Admission</span>
+
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </button>
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
 
 <!---------- Footer HTML Starts --------->
 <div class="footer-section">
