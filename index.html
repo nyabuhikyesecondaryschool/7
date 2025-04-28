@@ -43,6 +43,26 @@
       media="min-width(768px)"
     />
       <style>
+	      container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.item {
+  grid-column: span 4; /* 4 columns on desktop */
+}
+
+@media only screen and (max-width: 768px) {
+  .item {
+    grid-column: span 6; /* 6 columns on tablet */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .item {
+    grid-column: span 12; /* full width on mobile */
+  }
         /********** Common CSS Starts **********/  
         html, body {
              font-family: Roboto, sans-serif, arial;
@@ -832,23 +852,7 @@ p .quick-link ul {
      padding-top:20px;
      color: #fff;
 }
-	      /* Responsive styles */
-@media only screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-  nav ul {
-    flex-direction: column;
-  }
-  nav li {
-    margin-bottom: 10px;
-  }
+	   
 /********** Footer Copyright CSS Ends **********/
         </style>
    </head>
